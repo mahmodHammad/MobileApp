@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { View, StyleSheet, ScrollView } from "react-native";
+import { View, StyleSheet, ScrollView ,Text} from "react-native";
+
 import Submit from "../../../../shared/Submit";
 import Input from "../../../../shared/Input";
 import axios from "axios";
@@ -50,6 +51,9 @@ export default ({ navigation }) => {
 
   return (
     <React.Fragment>
+      <Text>
+        HELLO WORLD
+      </Text>
       <Modal
         visible={visible}
         setVisible={setVisible}

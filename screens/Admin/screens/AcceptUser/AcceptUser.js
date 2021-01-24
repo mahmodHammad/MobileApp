@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
     margin: 20,
   },
   title: {
-    fontSize: 0,
+    fontSize: 10,
   },
   box: {
     display: "flex",

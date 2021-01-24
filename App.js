@@ -48,9 +48,9 @@ export default function App() {
     <PreferencesContext.Provider value={preferences}>
       <PaperProvider theme={newTHeme}>
         <NavigationContainer theme={newTHeme}>
-          <StudentDashboard />
+          {/* <StudentDashboard /> */}
           {/* <TeacherDashboard/> */}
-          {/* <Admin/> */}
+          <Admin/>
           {/* <BottomNavigation
             setSnackMessage={setSnackMessage}
             setVisible={setVisible}
