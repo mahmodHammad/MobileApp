@@ -13,25 +13,31 @@ import { FlatList } from "react-native";
 
 const Header = ({ items, handleCheck, title, index }) => {
   return (
+  
+
     <View>
       <FlatList
         data={items}
         extraData={items}
-        renderItem={(student) => (
+        renderItem={(student) => (  <TouchableRipple
+                
+    onPress={()=>handleCheck(student.index, student.item.selected)}
+    >
           <View style={styles.box} key={student.index}>
-            <Text style={{borderBottomColor:"#3f0",borderBottomWidth:2}}>{student.item.name}</Text>
+            <Text>{student.item.name}</Text>
             <Checkbox
-            style={{backgroundColor:"green"}}
               status={student.item.selected ? "checked" : "unchecked"}
               onPress={() => {
-                console.log("student'", items, student.item.selected);
-                handleCheck(student.index, student.item.selected);
+                 handleCheck(student.index, student.item.selected);
               }}
             />
           </View>
+          </TouchableRipple>
         )}
       />
     </View>
+    
+
   );
 };
 export default Header;
